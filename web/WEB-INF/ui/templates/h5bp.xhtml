@@ -1,26 +1,56 @@
 <?xml version='1.0' encoding='UTF-8' ?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
+<!DOCTYPE html>
+<html xmlns:ui="http://java.sun.com/jsf/facelets"
+			xmlns:p="http://primefaces.org/ui"
+			xmlns:f="http://java.sun.com/jsf/core"
+			xmlns:h="http://java.sun.com/jsf/html"
+			xmlns="http://www.w3.org/1999/xhtml">
 
   <h:head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="./../../../resources/css/default.css" rel="stylesheet" type="text/css" />
-    <link href="./../../../resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
-    <title>Facelets Template</title>
+    <meta charset="utf-8"></meta>
+
+		<link rel="author" href="/humans.txt" />
+		<meta name="description" content="Meeting Minutes"></meta>
+
+		<!-- Mobile viewport optimized: h5bp.com/viewport -->
+		<meta name="viewport" content="width=device-width"></meta>
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+		<title><h:outputText value="#{i18n['application.title']}" /></title>
+
+		<h:outputStylesheet library="less" name="style.css" />
+
+		<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+		<!-- All JavaScript at the bottom, except this Modernizr build.
+				 Modernizr enables HTML5 elements & feature detects for optimal performance.
+				 Create your own custom Modernizr build: www.modernizr.com/download/ -->
+		<h:outputScript library="js" name="libs/modernizr-2.5.3.min.js" />
   </h:head>
 
   <h:body>
+		<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <div id="top" class="top">
-      <ui:insert name="top">Top</ui:insert>
+    <div role="main" id="top" class="top">
+      <ui:insert name="h5bp"></ui:insert>
     </div>
 
-    <div id="content" class="center_content">
-      <ui:insert name="content">Content</ui:insert>
-    </div>
+		<!-- JavaScript at the bottom for fast page loading -->
+		<h:outputScript library="js" name="libs/bootstrap/bootstrap.min.js" />
+		<h:outputScript library="js" name="script.js" />
 
+		<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+		<!--
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+				g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+				s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+		-->
   </h:body>
-
 </html>
