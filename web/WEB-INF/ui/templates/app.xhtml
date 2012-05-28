@@ -8,7 +8,14 @@
 								xmlns:h="http://java.sun.com/jsf/html">
 
 	<ui:define name="h5bp">
-		<ui:insert name="app"></ui:insert>
+		
+		<ui:include src="../fragments/header.xhtml" />
+		
+		<div role="main" id="top" class="top">
+			<ui:insert name="app"></ui:insert>
+		</div>
+		
+		<ui:include src="../fragments/footer.xhtml" />
 	</ui:define>
 
 </ui:composition>

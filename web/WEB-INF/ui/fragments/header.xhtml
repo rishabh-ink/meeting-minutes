@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+								xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+								xmlns:f="http://java.sun.com/jsf/core"
+								xmlns:h="http://java.sun.com/jsf/html">
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="faces/index.xhtml"><h:outputText value="#{i18n['global.title']}" /></a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="faces/index.xhtml"><h:outputText value="#{i18n['global.navigation.home']}" /></a></li>
+						<li><a href="#about"><h:outputText value="#{i18n['global.navigation.about']}" /></a></li>
+						<li><a href="#contact"><h:outputText value="#{i18n['global.navigation.contact']}" /></a></li>
+						<li><a href="#help"><h:outputText value="#{i18n['global.navigation.help']}" /></a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+</ui:composition>

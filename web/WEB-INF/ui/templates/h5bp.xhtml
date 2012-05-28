@@ -17,7 +17,7 @@
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
-		<title><h:outputText value="#{i18n['application.title']}" /></title>
+		<title><h:outputText value="#{i18n['global.title']}" /></title>
 
 		<h:outputStylesheet library="less" name="style.css" />
 
@@ -34,12 +34,11 @@
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
 		<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <div role="main" id="top" class="top">
-      <ui:insert name="h5bp"></ui:insert>
-    </div>
+    
+    <ui:insert name="h5bp"></ui:insert>
 
 		<!-- JavaScript at the bottom for fast page loading -->
-		<h:outputScript library="js" name="libs/bootstrap/bootstrap.min.js" />
+		<h:outputScript library="js" name="libs/bootstrap.min.js" />
 		<h:outputScript library="js" name="script.js" />
 
 		<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
