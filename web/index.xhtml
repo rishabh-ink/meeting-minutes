@@ -8,9 +8,50 @@
 								xmlns:h="http://java.sun.com/jsf/html">
 
 	<ui:define name="app">
-		
-		
-		<p:spinner />
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span9">
+					<div class="hero-unit">
+				<div class="row-fluid">
+					<div class="span2">
+						<img src="img/logo.png" alt="Spiral-bound yellow notebook" />
+					</div>
+					<div class="span10">
+						<h2><h:outputText value="#{i18n['global.title']}" /></h2>
+						<p><h:outputText value="#{i18n['global.description']}" /></p>
+						<h6>
+							Created by <h:outputText value="#{i18n['global.description']}" />
+						</h6>
+					</div>
+				</div>
+			</div>
+				</div>
+				<div class="span3">
+					<form action="j_security_check" class="well" method="post">
+						<fieldset>
+							<legend><h:outputText value="#{i18n['login.title']}" /></legend>
+							<div class="control-group">
+								<label class="control-label" for="lh-first-name"><i class="icon-user"></i><h:outputText value=" " /><h:outputText value="#{i18n['login.username']}" /></label>
+								<div class="controls">
+									<h:inputText id="j_username" title="#{i18n['login.username.tooltip']}" />
+									<span class="help-inline"></span>
+									<span class="help-block"></span>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="lh-last-name"><i class="icon-key"></i><h:outputText value=" " /><h:outputText value="#{i18n['login.password']}" /></label>
+								<div class="controls">
+									<h:inputSecret id="j_password" title="#{i18n['login.password.tooltip']}" />
+									<span class="help-inline"></span>
+									<span class="help-block"></span>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
 	</ui:define>
 
 </ui:composition>
