@@ -17,10 +17,34 @@
 				<a class="brand" href="faces/index.xhtml"><h:outputText value="#{i18n['global.title']}" /></a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="faces/index.xhtml"><h:outputText value="#{i18n['global.navigation.home']}" /></a></li>
-						<li><a href="#about"><h:outputText value="#{i18n['global.navigation.about']}" /></a></li>
-						<li><a href="#contact"><h:outputText value="#{i18n['global.navigation.contact']}" /></a></li>
-						<li><a href="#help"><h:outputText value="#{i18n['global.navigation.help']}" /></a></li>
+						<li>
+							<h:outputLink value="faces/index.xhtml">
+								<i class="icon-home"></i>
+								<h:outputText value="&#160;" />
+								#{i18n['global.navigation.home']}
+							</h:outputLink>
+						</li>
+						<li>
+							<h:outputLink value="#about">
+								<i class="icon-info-sign"></i>
+								<h:outputText value="&#160;" />
+								#{i18n['global.navigation.about']}
+							</h:outputLink>
+						</li>
+						<li>
+							<h:outputLink value="#about">
+								<i class="icon-envelope"></i>
+								<h:outputText value="&#160;" />
+								#{i18n['global.navigation.contact']}
+							</h:outputLink>
+							</li>
+						<li>
+							<h:outputLink value="#help">
+								<i class="icon-question-sign"></i>
+								<h:outputText value="&#160;" />
+								#{i18n['global.navigation.help']}
+							</h:outputLink>
+						</li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>

@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	
+	<!-- Indicates the stage of the initialized application. 
+	Set the project stage to "Development", "UnitTest", "SystemTest", or "Production".
+	See http://myfaces.apache.org/core20/myfaces-impl/webconfig.html#javax_faces_PROJECT_STAGE
+	-->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
+	
+	<!-- Strip XML comments out of Facelets before delivering to the client.
+	See http://myfaces.apache.org/core20/myfaces-impl/webconfig.html#javax_faces_FACELETS_SKIP_COMMENTS
+	-->
 	<context-param>
 		<param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
 		<param-value>true</param-value>
 	</context-param>
+	
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -25,4 +35,15 @@
 	<welcome-file-list>
 		<welcome-file>faces/index.xhtml</welcome-file>
 	</welcome-file-list>
+	
+	<!-- MIME type mapping for WOFF fonts.
+	See http://www.w3.org/TR/WOFF/#appendix-b
+			https://developer.mozilla.org/en/CSS/@font-face#Notes
+			https://developer.mozilla.org/en/About_WOFF
+	-->
+	<mime-mapping>
+		<extension>woff</extension>
+		<mime-type>application/font-woff</mime-type>
+	</mime-mapping>
+	<!-- /MIME type mapping for WOFF fonts. -->
 </web-app>

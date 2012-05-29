@@ -12,19 +12,19 @@
 			<div class="row-fluid">
 				<div class="span9">
 					<div class="hero-unit">
-				<div class="row-fluid">
-					<div class="span2">
-						<img src="img/logo.png" alt="Spiral-bound yellow notebook" />
+						<div class="row-fluid">
+							<div class="span3">
+								<h:graphicImage library="img" name="logo.png" alt="#{i18n['global.logo.alt']}" title="#{i18n['global.logo.tooltip']}" />
+							</div>
+							<div class="span9">
+								<h2><h:outputText value="#{i18n['global.title']}" /></h2>
+								<p><h:outputText value="#{i18n['global.description']}" /></p>
+								<h6>
+									<h:outputText value="#{i18n['login.createdby']}" /><h:outputText value=" " /><h:outputLink  value="http://www.metricstream.com">#{i18n['global.author']}</h:outputLink>
+								</h6>
+							</div>
+						</div>
 					</div>
-					<div class="span10">
-						<h2><h:outputText value="#{i18n['global.title']}" /></h2>
-						<p><h:outputText value="#{i18n['global.description']}" /></p>
-						<h6>
-							Created by <h:outputText value="#{i18n['global.description']}" />
-						</h6>
-					</div>
-				</div>
-			</div>
 				</div>
 				<div class="span3">
 					<form action="j_security_check" class="well" method="post">
